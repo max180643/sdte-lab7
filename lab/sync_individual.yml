@@ -1,0 +1,20 @@
+- hosts: web[0]
+  tasks:
+    - name: "copy website1 to host1"
+      copy:
+        src: challenge/1/
+        dest: /var/www/default
+
+- hosts: web[1]
+  tasks:
+    - name: "copy website2 to host2"
+      copy:
+        src: challenge/2/
+        dest: /var/www/default
+
+- hosts: web[2]
+  tasks:
+    - name: "copy website3 to host3"
+      copy:
+        src: challenge/3/
+        dest: /var/www/default
